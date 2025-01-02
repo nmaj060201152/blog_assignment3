@@ -5,6 +5,7 @@ const page = () => {
     <div>
       <div className='bg-slate-500 h-[80px] w-[900px]'>
         <h1>Navaid Majeed Sumalani</h1>
+        <h1>Junaid Majeed Sumalani</h1>
 
       </div>
     </div>
