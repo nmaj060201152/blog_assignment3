@@ -1,14 +1,18 @@
-import React from 'react'
+export default async function Home() {
+  // Fetch products data from API
+  const res = await fetch('https://fakestoreapi.com/products');
+  const products = await res.json();
 
-const page = () => {
   return (
     <div>
-      <div className='flex bg-slate-500 h-[80px] w-screen justify-between m-0 p-0'>
-        <div className='flex bg-slate-500 h-[80px] w-screen justify-between m-0 p-0'>Nv 03-01-2025</div>
-        <div></div>
-      </div>
+      <h1>Product List</h1>
+      <ul>
+        {products.map((product) => (
+          <li key={product.id}>
+            {product.title} - ${product.price}
+          </li>
+        ))}
+      </ul>
     </div>
-  )
+  );
 }
-
-export default page
